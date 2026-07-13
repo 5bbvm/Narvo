@@ -11,6 +11,9 @@
   },
   "author": "Muthana ALMaiah",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@types/node": "^20.0.0",
     "ts-node": "^10.9.2",
