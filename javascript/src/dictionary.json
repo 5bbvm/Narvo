@@ -4,7 +4,53 @@
     "language": "en",
     "description": "Standardized V2 Intensity Engine Lexicon - Merged Empath + Milestones",
     "last_updated": "2026-03-22",
-    "suffixes": ["ing", "ed", "tion", "sion", "ment", "ness", "ly", "er", "est", "ful", "less", "ous", "ive", "able", "ible", "al", "ize", "ise", "ity", "ence", "ance"]
+    "suffixes": [
+      "ing",
+      "ed",
+      "tion",
+      "sion",
+      "ment",
+      "ness",
+      "ly",
+      "er",
+      "est",
+      "ful",
+      "less",
+      "ous",
+      "ive",
+      "able",
+      "ible",
+      "al",
+      "ize",
+      "ise",
+      "ity",
+      "ence",
+      "ance"
+    ],
+    "negators": [
+      "not",
+      "no",
+      "never",
+      "neither",
+      "nobody",
+      "nothing",
+      "nowhere",
+      "nor",
+      "cannot",
+      "can't",
+      "don't",
+      "doesn't",
+      "didn't",
+      "won't",
+      "wouldn't",
+      "shouldn't",
+      "couldn't",
+      "isn't",
+      "aren't",
+      "wasn't",
+      "weren't"
+    ],
+    "alpha": 3
   },
   "categories": {
     "pride_and_achievement": {
@@ -29,7 +75,6 @@
           "overcome",
           "pinnacle",
           "pride",
-          "relief",
           "resigned",
           "retired",
           "succeeded",
@@ -80,7 +125,6 @@
           "unresponsive"
         ],
         "high": [
-          "broke",
           "chronic",
           "collapsed",
           "debilitating",
@@ -305,7 +349,6 @@
         "high": [
           "athlete",
           "clutch",
-          "match",
           "medal",
           "overtime",
           "qualifier",
@@ -423,7 +466,6 @@
           "shelter"
         ],
         "high": [
-          "bond",
           "foster",
           "kitten",
           "obedience",
@@ -505,7 +547,6 @@
           "birth",
           "born",
           "career",
-          "child",
           "college",
           "divorce",
           "divorcee",
@@ -533,11 +574,14 @@
           "recovery",
           "relocated",
           "retirement",
-          "school",
           "travel",
           "treatment"
         ],
         "high": [
+          "child",
+          "school"
+        ],
+        "medium": [
           "job"
         ]
       }
@@ -556,7 +600,6 @@
         "brightest",
         "brilliant",
         "cherished",
-        "content",
         "delighted",
         "ecstacy",
         "ecstatic",
@@ -701,9 +744,7 @@
         "hug",
         "intimacy",
         "kissed",
-        "lost",
         "lover",
-        "met",
         "miss",
         "moved in",
         "moving in",
@@ -725,23 +766,17 @@
         "bitterly",
         "completely",
         "deeply",
-        "end",
         "especially",
         "exceedingly",
         "extraordinarily",
         "extremely",
-        "found",
         "genuinely",
         "greatly",
         "highly",
         "incredibly",
         "intense",
         "intensely",
-        "last",
-        "left",
         "massively",
-        "new",
-        "old",
         "profoundly",
         "purely",
         "radically",
@@ -749,7 +784,6 @@
         "remarkably",
         "severely",
         "significantly",
-        "stop",
         "strikingly",
         "supremely",
         "totally",
@@ -904,10 +938,10 @@
           "pulled it off",
           "turned out",
           "turning out",
-          "turns out",  
+          "turns out",
           "worked out",
           "working out",
-          "works out" 
+          "works out"
         ],
         "medium": [
           "concluded",
@@ -917,7 +951,7 @@
           "wrapped up",
           "worked",
           "didn't work",
-          "did not work"  
+          "did not work"
         ]
       }
     },
@@ -962,8 +996,34 @@
     },
     "time_experience": {
       "weight_groups": {
-        "medium": ["finally", "eventually", "all day", "all night", "for hours"]
+        "medium": [
+          "finally",
+          "eventually",
+          "all day",
+          "all night",
+          "for hours"
+        ]
       }
     }
+  },
+  "amplifier_patterns": {
+    "superlatives": [
+      "best",
+      "worst",
+      "greatest",
+      "most",
+      "least",
+      "happiest",
+      "saddest",
+      "proudest",
+      "hardest",
+      "biggest"
+    ],
+    "experiential": [
+      "first ever",
+      "never felt",
+      "nothing like",
+      "ever had"
+    ]
   }
 }

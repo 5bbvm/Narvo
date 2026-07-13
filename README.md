@@ -21,6 +21,7 @@ Narvo/
 └── javascript/
     ├── src/
     │   ├── index.ts           # Core scoring engine
+    │   ├── types.ts           # Public TypeScript interfaces and types
     │   └── dictionary.json    # Lexicon configuration and weights
     ├── package.json           # Node.js dependencies and scripts
     ├── tsconfig.json          # TypeScript compilation settings
@@ -59,10 +60,13 @@ npx ts-node javascript/example.ts
 import { TextWorthinessScorer } from './src/index';
 import lexiconData from './src/dictionary.json';
 
-const scorer = new TextWorthinessScorer(lexiconData);
-const score = scorer.score("This product is completely ecstatic, a legendary triumph.");
+// Note: Ensure your lexicon conforms to the LexiconConfig interface
+const scorer = new TextWorthinessScorer(lexiconData as any);
+const result = scorer.score("This product is completely ecstatic, a legendary triumph.");
 
-console.log(score);
+console.log(`Score: ${result.score}`);
+console.log(`Lexicon Subscore: ${result.lexicon}`);
+console.log(`Matched Critical Words:`, result.hits.critical);
 ```
 
 ## 📜 License
@@ -70,4 +74,4 @@ console.log(score);
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <hr/>
-<p align="center">Built with ❤️ by Muthana Maiah</p>
+<p align="center">Built with ❤️ by Muthana ALMaiah</p>
