@@ -1,6 +1,6 @@
-import { LexiconConfig, NarvoOptions, NarvoResult, IntensityTier } from './types';
+import { LexiconConfig, LexvaOptions, LexvaResult, IntensityTier } from './types';
 
-export { LexiconConfig, NarvoOptions, NarvoResult, IntensityTier } from './types';
+export { LexiconConfig, LexvaOptions, LexvaResult, IntensityTier } from './types';
 
 // Deterministic text significance and intensity evaluator.
 export class TextWorthinessScorer {
@@ -16,7 +16,7 @@ export class TextWorthinessScorer {
     private negators = new Set<string>();
     private alpha: number = 4.0;
 
-    constructor(config: LexiconConfig, options: NarvoOptions = {}) {
+    constructor(config: LexiconConfig, options: LexvaOptions = {}) {
         if (config.metadata?.alpha !== undefined) this.alpha = config.metadata.alpha;
         if (options.alpha !== undefined) this.alpha = options.alpha;
 
@@ -183,8 +183,8 @@ export class TextWorthinessScorer {
     }
 
     // Evaluates the worthiness and intensity of a text segment.
-    public score(text: string): NarvoResult {
-        const emptyResult: NarvoResult = {
+    public score(text: string): LexvaResult {
+        const emptyResult: LexvaResult = {
             score: 0, lexicon: 0, structure: 0,
             hits: { critical: [], high: [], medium: [] },
             meta: { wordCount: 0, uniqueWordCount: 0, sentenceCount: 0, lexicalDiversity: 0 }

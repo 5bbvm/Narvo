@@ -17,14 +17,14 @@ export interface LexiconConfig {
     };
 }
 
-export interface NarvoOptions {
+export interface LexvaOptions {
     /** Override the default alpha normalization constant */
     alpha?: number;
     /** Apply a specific profile (for future use) */
     profile?: 'standard' | 'sensitive' | 'strict';
 }
 
-export interface NarvoResult {
+export interface LexvaResult {
     /** Final blended score [0, 1] */
     score: number;
     

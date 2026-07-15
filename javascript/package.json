@@ -1,5 +1,5 @@
 {
-  "name": "narvo",
+  "name": "lexva",
   "version": "1.0.0",
   "description": "A standalone, zero-dependency text worthiness scorer and lexicon analysis engine.",
   "main": "dist/index.js",
@@ -23,13 +23,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/5bbvm/Narvo.git",
+    "url": "git+https://github.com/5bbvm/Lexva.git",
     "directory": "javascript"
   },
   "bugs": {
-    "url": "https://github.com/5bbvm/Narvo/issues"
+    "url": "https://github.com/5bbvm/Lexva/issues"
   },
-  "homepage": "https://github.com/5bbvm/Narvo/tree/main/javascript#readme",
+  "homepage": "https://github.com/5bbvm/Lexva/tree/main/javascript#readme",
   "engines": {
     "node": ">=18"
   },
