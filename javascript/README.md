@@ -1,4 +1,4 @@
-<h1 align="center">Lexva</h1>
+<h1 align="center">Quorlen</h1>
 
 <p align="center">
   <strong>A standalone, zero-dependency text worthiness scorer and lexicon analysis engine.</strong>
@@ -12,12 +12,12 @@
 
 ## 🚀 Overview
 
-Lexva is a lightweight, pure TypeScript scoring module designed to evaluate the "worthiness" or intensity of text. It uses a deterministic morphological stemming approach and lexicon dictionaries to parse, analyze, and grade text with zero external dependencies.
+Quorlen is a lightweight, pure TypeScript scoring module designed to evaluate the "worthiness" or intensity of text. It uses a deterministic morphological stemming approach and lexicon dictionaries to parse, analyze, and grade text with zero external dependencies.
 
 ## 📦 Project Structure
 
 ```text
-Lexva/
+Quorlen/
 └── javascript/
     ├── src/
     │   ├── index.ts           # Core scoring engine
@@ -48,7 +48,7 @@ Lexva/
 
 ## 💻 Usage
 
-Run the verification script directly from the root `Lexva/` directory via `ts-node`:
+Run the verification script directly from the root `Quorlen/` directory via `ts-node`:
 
 ```bash
 npx ts-node javascript/example.ts
@@ -57,7 +57,7 @@ npx ts-node javascript/example.ts
 ### Quick Example
 
 ```typescript
-import { TextWorthinessScorer } from 'lexva';
+import { TextWorthinessScorer } from 'quorlen';
 
 // Load your lexicon configuration (see dictionary.json for the schema)
 const lexicon = require('./path/to/your/dictionary.json');

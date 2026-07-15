@@ -17,14 +17,14 @@ export interface LexiconConfig {
     };
 }
 
-export interface LexvaOptions {
+export interface QuorlenOptions {
     /** Override the default alpha normalization constant */
     alpha?: number;
     /** Apply a specific profile (for future use) */
     profile?: 'standard' | 'sensitive' | 'strict';
 }
 
-export interface LexvaResult {
+export interface QuorlenResult {
     /** Final blended score [0, 1] */
     score: number;
     
