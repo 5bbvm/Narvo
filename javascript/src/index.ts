@@ -1,6 +1,6 @@
-import { LexiconConfig, QuorlenOptions, QuorlenResult, IntensityTier } from './types';
+import { LexiconConfig, QuorlenOptions, QuorlenResult, IntensityTier, SignificanceTier } from './types';
 
-export { LexiconConfig, QuorlenOptions, QuorlenResult, IntensityTier } from './types';
+export { LexiconConfig, QuorlenOptions, QuorlenResult, IntensityTier, SignificanceTier } from './types';
 
 // Deterministic text significance and intensity evaluator.
 export class TextWorthinessScorer {
@@ -185,7 +185,10 @@ export class TextWorthinessScorer {
     // Evaluates the worthiness and intensity of a text segment.
     public score(text: string): QuorlenResult {
         const emptyResult: QuorlenResult = {
-            score: 0, lexicon: 0, structure: 0,
+            score: 0,
+            tier: 'Routine',
+            lexicon: 0,
+            structure: 0,
             hits: { critical: [], high: [], medium: [] },
             meta: { wordCount: 0, uniqueWordCount: 0, sentenceCount: 0, lexicalDiversity: 0 }
         };
@@ -328,8 +331,12 @@ export class TextWorthinessScorer {
         const structureWeight = 0.20;
         const totalScore = (lexiconScore * lexicalWeight) + (structureScore * structureWeight);
 
+        const finalScore = Number(Math.min(Math.max(totalScore, 0), 1).toFixed(4));
+        const tier = this.calculateTier(finalScore);
+
         return {
-            score: Math.min(Math.max(totalScore, 0), 1),
+            score: finalScore,
+            tier,
             lexicon: Number(lexiconScore.toFixed(4)),
             structure: Number(structureScore.toFixed(4)),
             hits: {
@@ -344,6 +351,14 @@ export class TextWorthinessScorer {
                 lexicalDiversity: Number(lexicalDiversity.toFixed(4))
             }
         };
+    }
+
+    private calculateTier(score: number): SignificanceTier {
+        if (score >= 0.70) return 'Critical';
+        if (score >= 0.45) return 'Significant';
+        if (score >= 0.25) return 'Meaningful';
+        if (score >= 0.15) return 'Minor';
+        return 'Routine';
     }
 
     private findWordInProcessed(processedText: string, word: string, _wordIndex: number, _allWords: string[]): number {

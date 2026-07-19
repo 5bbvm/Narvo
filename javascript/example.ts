@@ -2,7 +2,7 @@ import { TextWorthinessScorer } from './src/index';
 import lexiconData from './src/dictionary.json';
 
 const scorer = new TextWorthinessScorer(lexiconData as any);
-const sampleText = "I finally graduated college today! I'm completely ecstatic, this is a legendary triumph.";
+const sampleText = "I got promoted to Senior Engineer today after five years with the company.";
 const result = scorer.score(sampleText);
 
 console.log("======================================================");
@@ -12,11 +12,11 @@ console.log(`Sample Text: "${sampleText}"\n`);
 console.log(`Computed Score Object:`);
 console.log(JSON.stringify({
     text: sampleText,
-    score: Number(result.score.toFixed(4)),
+    score: result.score,
+    tier: result.tier,
     lexicon: result.lexicon,
     structure: result.structure,
     hits: result.hits,
-    meta: result.meta,
-    tier: result.score >= 0.7 ? 'critical' : result.score >= 0.4 ? 'high' : result.score >= 0.2 ? 'medium' : 'low'
+    meta: result.meta
 }, null, 2));
 console.log("======================================================");

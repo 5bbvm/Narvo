@@ -66,6 +66,7 @@ const scorer = new TextWorthinessScorer(lexicon);
 const result = scorer.score("This product is completely ecstatic, a legendary triumph.");
 
 console.log(`Score: ${result.score}`);
+console.log(`Tier: ${result.tier}`);        // "Meaningful", "Significant", "Critical", etc.
 console.log(`Lexicon Subscore: ${result.lexicon}`);
 console.log(`Matched Critical Words:`, result.hits.critical);
 ```

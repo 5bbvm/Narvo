@@ -1,4 +1,5 @@
 export type IntensityTier = 'critical' | 'high' | 'medium';
+export type SignificanceTier = 'Routine' | 'Minor' | 'Meaningful' | 'Significant' | 'Critical';
 
 export interface LexiconConfig {
     metadata?: {
@@ -27,6 +28,9 @@ export interface QuorlenOptions {
 export interface QuorlenResult {
     /** Final blended score [0, 1] */
     score: number;
+    
+    /** Significance tier calculated from score thresholds */
+    tier: SignificanceTier;
     
     /** Lexicon sub-score [0, 1] */
     lexicon: number;

@@ -1,7 +1,7 @@
 {
   "name": "quorlen",
-  "version": "1.0.2",
-  "description": "A standalone, zero-dependency text worthiness scorer and lexicon analysis engine.",
+  "version": "1.1.0",
+  "description": "A lightweight, zero-dependency NLP engine that estimates how important or meaningful a piece of text is.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
@@ -14,12 +14,27 @@
   "author": "Muthana ALMaiah",
   "license": "MIT",
   "keywords": [
-    "text-worthiness",
+    "text-significance",
+    "text-importance",
+    "meaningful-text",
+    "semantic-importance",
+    "information-value",
+    "text-ranking",
     "nlp",
-    "sentiment-analysis",
+    "typescript",
+    "javascript",
+    "ai",
+    "llm",
+    "rag-filtering",
+    "llm-workflows",
+    "summarization",
+    "content-filtering",
+    "natural-language-processing",
+    "semantic-analysis",
+    "text-analysis",
     "lexicon",
-    "text-intensity",
-    "deterministic"
+    "deterministic",
+    "zero-dependency"
   ],
   "repository": {
     "type": "git",
@@ -29,7 +44,7 @@
   "bugs": {
     "url": "https://github.com/5bbvm/Quorlen/issues"
   },
-  "homepage": "https://github.com/5bbvm/Quorlen/tree/main/javascript#readme",
+  "homepage": "https://github.com/5bbvm/Quorlen#readme",
   "engines": {
     "node": ">=18"
   },
