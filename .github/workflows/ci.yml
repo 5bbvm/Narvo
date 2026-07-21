@@ -61,7 +61,7 @@ jobs:
       working-directory: ./javascript
 
     - name: Generate Expected Results JSON
-      run: node extract_expected.js
+      run: node javascript/scripts/extract_expected.js
 
     - name: Install Python dependencies
       run: |

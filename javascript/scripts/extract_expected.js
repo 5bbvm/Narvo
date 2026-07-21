@@ -1,6 +1,7 @@
-const { TextWorthinessScorer } = require('./javascript/dist/index.js');
-const lexiconData = require('./javascript/dist/dictionary.json');
+const { TextWorthinessScorer } = require('../dist/index.js');
+const lexiconData = require('../dist/dictionary.json');
 const fs = require('fs');
+const path = require('path');
 
 const scorer = new TextWorthinessScorer(lexiconData);
 
@@ -222,5 +223,6 @@ const results = testSamples.map(sample => {
     };
 });
 
-fs.writeFileSync('expected_results.json', JSON.stringify(results, null, 2), 'utf-8');
-console.log('Successfully wrote expected_results.json');
+const outputPath = path.join(__dirname, '../../python/tests/expected_results.json');
+fs.writeFileSync(outputPath, JSON.stringify(results, null, 2), 'utf-8');
+console.log(`Successfully generated ${outputPath}`);
