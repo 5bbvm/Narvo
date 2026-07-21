@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quorlen"
+version = "1.1.0"
+description = "A lightweight, zero-dependency engine that estimates the importance of text."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+    { name = "Muthana ALMaiah" }
+]
+keywords = [
+    "text-significance",
+    "text-importance",
+    "meaningful-text",
+    "semantic-importance",
+    "information-value",
+    "text-ranking",
+    "nlp",
+    "python",
+    "ai",
+    "llm",
+    "rag-filtering",
+    "llm-workflows",
+    "summarization",
+    "content-filtering",
+    "natural-language-processing",
+    "semantic-analysis",
+    "text-analysis",
+    "lexicon",
+    "deterministic",
+    "zero-dependency",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: General",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+    "regex>=2022.1.18",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "build>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/5bbvm/Quorlen"
+Repository = "https://github.com/5bbvm/Quorlen"
+"Bug Tracker" = "https://github.com/5bbvm/Quorlen/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+quorlen = ["dictionary.json"]
